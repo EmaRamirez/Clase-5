@@ -1,0 +1,44 @@
+@model IEnumerable<Car>
+@{
+
+}
+
+<h2>Listado de vehiculos</h2>
+
+<a asp-action="Create" class="btn btn-warning">Agregar Vehiculo</a>
+<table class="table table">
+    <thead>
+        <tr>
+
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Make)</th>
+            <th>@Html.DisplayNameFor(model => model.Model)</th>
+            <th>@Html.DisplayNameFor(model => model.Year)</th>
+            <th>@Html.DisplayNameFor(model => model.Plate)</th>
+            <th>@Html.DisplayNameFor(model => model.color)</th>
+            <th>Opciones</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Make</td>
+                <td>@item.Model</td>
+                <td>@item.Year</td>
+                <td>@item.Plate</td>
+                <td>@item.color</td>
+                <td>
+                    <a asp-action="Detail" asp-route-id=" @item.Id" class="btn btn-primary">Detalle</a>
+                    <a asp-action="Delete" asp-route-id=" @item.Id" class="btn btn-danger">Borrar</a>
+                    <a asp-action="Edit" asp-route-id=" @item.Id" class="btn btn-info">Modificar</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

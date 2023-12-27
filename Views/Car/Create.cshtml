@@ -1,0 +1,38 @@
+@model Car
+@{
+
+}
+
+<form method="post" asp-action="OnPostCreate">
+    <div class="mb-3">
+        <label asp-for="Id" class="form-label"></label>
+        <input type="text" asp-for="Id" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Make" class="form-label"></label>
+        <input type="text" asp-for="Make" class="form-control">
+    </div>
+    <div>
+        <label asp-for="Model" class="form-label"></label>
+        <input type="text" asp-for="Model" class="form-control">
+    </div>
+    <div>
+        <label asp-for="Year" class="form-label"></label>
+        <input type="number" asp-for="Year" class="form-control">
+    </div>
+    <div>
+        <label asp-for="Plate" class="form-label"></label>
+        <input type="text" asp-for="Plate" class="form-control">
+    </div>
+    <div>
+        <label asp-for="color" class="form-label"></label>
+        <input type="text" asp-for="color" class="form-control">
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-light">Guardar</button>
+    </div>
+
+
+
+
+</form>
